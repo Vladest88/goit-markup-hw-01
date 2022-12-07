@@ -1,2 +1,44 @@
-/* цвет основного текста #2E2F42 */
-/* цвет абзацей #434455 */
+body {
+	background-color: #ffffff;
+	color: #434455;
+}
+
+.list {
+	list-style: none;
+}
+
+/* HEADER */
+
+.logo-1 {
+	color: #2e2f42;
+}
+.logo-2 {
+	color: #4d5ae5;
+}
+.site-nav {
+	color: #2e2f42;
+}
+
+.contact-links .link:hover,
+.contact-links .link:focus {
+	color: #4d5ae5;
+}
+
+/* MAIN */
+
+.hero-title {
+	color: #ffffff;
+}
+/* ДАТЬ СТИЛИ КНОПКЕ ORDER SERVICE */
+
+/* лого-1 
+IRIS #4D5AE5 */
+/* заголовки Navy Blue #2E2F42 */
+/* #31D0AA */
+/* текст основной SLATE #434455 */
+/* #8E8F99 */
+/* #E7E9FC */
+/* #F4F4FD */
+
+/* білий #FFFFFF */
+/* другоррядний колір фону #2E2F42 */
