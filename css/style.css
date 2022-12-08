@@ -1,44 +1,155 @@
+:root {
+	--description-text-color: #434455;
+	--title-text-color: #2e2f42;
+	--background-color: #ffffff;
+	--accent-color: #4d5ae5;
+	--background-team: #f4f4fd;
+	--footer-text: #e7e9fc;
+	--button-hero-bg: #404bbf;
+	--button-portfolio-bg: #e7e9fc;
+}
+
 body {
-	background-color: #ffffff;
-	color: #434455;
+	background-color: var(--background-color);
+	color: var(--description-text-color);
 }
 
 .list {
 	list-style: none;
 }
+.hidden-title {
+	visibility: hidden;
+}
 
-/* HEADER */
+/* Header */
 
 .logo-1 {
-	color: #2e2f42;
+	color: var(--title-text-color);
+	text-decoration: none;
 }
 .logo-2 {
-	color: #4d5ae5;
+	color: var(--accent-color);
+	text-decoration: none;
 }
-.site-nav {
-	color: #2e2f42;
+.site-nav a {
+	color: var(--title-text-color);
+	text-decoration: none;
 }
 
+/* Решил попробовать из вебенира Репеты */
+.site-nav .current-link {
+	color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+	color: var(--description-text-color);
+}
+.site-nav .link:active {
+	color: var(--accent-color);
+}
+.contact-links a {
+	text-decoration: none;
+	color: var(--description-text-color);
+}
 .contact-links .link:hover,
 .contact-links .link:focus {
-	color: #4d5ae5;
+	color: var(--accent-color);
 }
 
-/* MAIN */
+/* Hero */
 
 .hero-title {
-	color: #ffffff;
+	color: var(--background-color);
 }
-/* ДАТЬ СТИЛИ КНОПКЕ ORDER SERVICE */
 
-/* лого-1 
-IRIS #4D5AE5 */
-/* заголовки Navy Blue #2E2F42 */
+.hero {
+	background-color: var(--title-text-color);
+}
+
+.button-hero {
+	color: var(--background-color);
+	background-color: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.button-hero:hover,
+.button-hero:focus {
+	color: var(--background-color);
+	background-color: var(--accent-color);
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 4px;
+}
+
+.button-hero:active {
+	color: var(--background-color);
+	background-color: var(--button-hero-bg);
+}
+
+/* Benefits */
+/* спрятать h2 - class hidden title */
+
+.benefits-title {
+	color: var(--title-text-color);
+}
+
+/* Products */
+
+.products-title {
+	color: var(--title-text-color);
+}
+
+/* Team */
+
+.team {
+	background-color: var(--background-team);
+}
+.team-title {
+	color: var(--title-text-color);
+}
+.worker-totle {
+	color: var(--title-text-color);
+}
+
+/* Footer */
+.footer {
+	background-color: var(--title-text-color);
+}
+
+.footer-text {
+	color: var(--footer-text);
+}
+.logo-footer {
+	color: var(--background-team);
+	text-decoration: none;
+}
+
+/* PORTFOLIO PAGE */
+
+.services-title {
+	color: var(--title-text-color);
+}
+
+.portfolio-button {
+	color: var(--accent-color);
+	background-color: var(--button-portfolio-bg);
+	cursor: pointer;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+	color: var(--background-color);
+	background-color: var(--accent-color);
+}
+
+/* +++++++ IRIS #4D5AE5 */
+/* +++++++++ заголовки Navy Blue #2E2F42 */
 /* #31D0AA */
-/* текст основной SLATE #434455 */
+/* +++++++++ текст основной SLATE #434455 */
 /* #8E8F99 */
 /* #E7E9FC */
-/* #F4F4FD */
+/* +++++ #F4F4FD */
 
-/* білий #FFFFFF */
-/* другоррядний колір фону #2E2F42 */
+/* +++++++ білий #FFFFFF */ ;
