@@ -12,8 +12,7 @@
 body {
 	background-color: var(--background-color);
 	color: var(--description-text-color);
-	font-family: roboto, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, noto, arial,
-		sans-serif;
+	font-family: roboto, sans-serif;
 }
 
 .list {
@@ -21,8 +20,18 @@ body {
 }
 
 /* щоб заховати непотрібні заголовки */
-.hidden-title {
-	visibility: hidden;
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 /* Header */
@@ -63,7 +72,7 @@ body {
 
 	width: 48px;
 	height: 24px;
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
@@ -76,7 +85,7 @@ body {
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-	color: var(--description-text-color);
+	color: var(--accent-color);
 }
 .site-nav .link:active {
 	color: var(--accent-color);
@@ -101,7 +110,7 @@ body {
 .hero-title {
 	color: var(--background-color);
 
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 56px;
 	line-height: 1.07;
 	text-align: center;
@@ -117,7 +126,7 @@ body {
 	background-color: var(--accent-color);
 
 	font-family: inherit;
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.19;
 	display: flex;
@@ -143,7 +152,7 @@ body {
 .benefits-title {
 	color: var(--title-text-color);
 
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
@@ -155,12 +164,23 @@ body {
 	letter-spacing: 0.02em;
 }
 
+.benefits-text {
+	color: var(--description-text-color);
+	width: 264px;
+	height: 72px;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+}
+
 /* Products */
 
 .products-title {
 	color: var(--title-text-color);
 
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.11;
 	text-align: center;
@@ -176,7 +196,7 @@ body {
 .team-title {
 	color: var(--title-text-color);
 
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.11;
 	text-align: center;
@@ -187,10 +207,21 @@ body {
 .worker-title {
 	color: var(--title-text-color);
 
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 20px;
 	line-height: 1.2;
 
+	letter-spacing: 0.02em;
+}
+
+.team-text {
+	color: var(--description-text-color);
+	width: 128px;
+	height: 24px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: center;
 	letter-spacing: 0.02em;
 }
 
@@ -239,7 +270,7 @@ body {
 	cursor: pointer;
 
 	font-family: inherit;
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.5;
 	display: flex;
@@ -257,13 +288,23 @@ body {
 .services-title {
 	color: var(--title-text-color);
 
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
 }
 
 .services-title .p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+}
+
+.services-text {
+	color: var(--description-text-color);
+	width: 30px;
+	height: 24px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
