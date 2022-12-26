@@ -13,10 +13,50 @@ body {
 	background-color: var(--background-color);
 	color: var(--description-text-color);
 	font-family: roboto, sans-serif;
+	font-size: 16px;
+	letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	display: block;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
 }
 
 .list {
 	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.container {
+	width: 1158px;
 }
 
 /* щоб заховати непотрібні заголовки */
@@ -34,9 +74,43 @@ body {
 	overflow: hidden;
 }
 
-/* Header */
+/* ---------------HEADER------------------- */
 
-.logo-1 {
+/*-----------------НЕ УВЕРЕН В ПРАВИЛЬНОСТИ ХЕДЕР---------------*/
+.header {
+	background-color: #e7e9fc;
+	width: 1440px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header-list {
+	display: block;
+	margin-left: auto;
+	gap: 40px;
+
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.header-contacts {
+	display: flex;
+	margin-left: auto;
+	gap: 40px;
+
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.header-nav,
+.list {
+	display: flex;
+}
+
+/*-----------------НЕ УВЕРЕН В ПРАВИЛЬНОСТИ ХЕДЕР---------------*/
+
+.logo-second {
 	color: var(--title-text-color);
 	text-decoration: none;
 	font-family: "Raleway", sans-serif;
@@ -50,8 +124,11 @@ body {
 	display: flex;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
+
+	margin-top: 24px;
+	margin-bottom: 24px;
 }
-.logo-2 {
+.logo-first {
 	color: var(--accent-color);
 	text-decoration: none;
 	font-family: "Raleway", sans-serif;
@@ -66,31 +143,30 @@ body {
 	text-transform: uppercase;
 }
 
-.site-nav a {
+.header-list a {
 	color: var(--title-text-color);
 	text-decoration: none;
 
 	width: 48px;
-	height: 24px;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 }
 
-/* Решил попробовать из вебенира Репеты */
-.site-nav .current-link {
+.header-list .current-link {
 	color: var(--accent-color);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.header-list .link:hover,
+.header-list .link:focus {
 	color: var(--accent-color);
 }
-.site-nav .link:active {
+.header-list .link:active {
 	color: var(--accent-color);
 }
-.contact-links a {
+
+.header-contacts a {
 	text-decoration: none;
 	color: var(--description-text-color);
 
@@ -100,25 +176,35 @@ body {
 	letter-spacing: 0.02em;
 }
 
-.contact-links .link:hover,
-.contact-links .link:focus {
+.header-contacts .link:hover,
+.header-contacts .link:focus {
 	color: var(--accent-color);
 }
 
-/* Hero */
+/* ------------HERO-------------*/
 
 .hero-title {
 	color: var(--background-color);
 
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 56px;
 	line-height: 1.07;
 	text-align: center;
 	letter-spacing: 0.02em;
+
+	width: 492px;
+
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .hero {
 	background-color: var(--title-text-color);
+
+	padding-top: 192px;
+	padding-bottom: 192px;
+	padding-left: 474px;
+	padding-right: 474px;
 }
 
 .button-hero {
@@ -133,7 +219,10 @@ body {
 	align-items: center;
 	letter-spacing: 0.04em;
 
-	cursor: pointer;
+	padding: 16px 32px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 48px;
 }
 
 .button-hero:hover,
@@ -147,7 +236,7 @@ body {
 	background-color: var(--button-hero-bg);
 }
 
-/* Benefits */
+/* ----------------BENEFITS--------------------*/
 
 .benefits-title {
 	color: var(--title-text-color);
@@ -156,6 +245,15 @@ body {
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+
+	margin-bottom: 8px;
+}
+
+.benefits-list {
+	display: flex;
+	gap: 24px;
+
+	margin-left: 156px;
 }
 
 .benefits-title .p {
@@ -175,7 +273,7 @@ body {
 	letter-spacing: 0.02em;
 }
 
-/* Products */
+/* ----------------PRODUCTS-------------------*/
 
 .products-title {
 	color: var(--title-text-color);
@@ -186,9 +284,21 @@ body {
 	text-align: center;
 	letter-spacing: 0.02em;
 	text-transform: capitalize;
+
+	margin-bottom: 72px;
 }
 
-/* Team */
+.products-list {
+	display: flex;
+	gap: 24px;
+}
+
+.products {
+	padding-top: 0;
+	margin-left: 156px;
+}
+
+/* -----------------TEAM----------------------*/
 
 .team {
 	background-color: var(--background-team);
@@ -202,36 +312,53 @@ body {
 	text-align: center;
 	letter-spacing: 0.02em;
 	text-transform: capitalize;
+
+	padding-bottom: 72px;
 }
 
-.worker-title {
-	color: var(--title-text-color);
+.team-list {
+	display: flex;
+	gap: 24px;
 
+	padding-left: 156px;
+}
+
+.team-worker {
+	color: var(--title-text-color);
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 1.2;
-
 	letter-spacing: 0.02em;
+	text-align: center;
+
+	margin-top: 32px;
 }
 
 .team-text {
 	color: var(--description-text-color);
-	width: 128px;
-	height: 24px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
 	text-align: center;
 	letter-spacing: 0.02em;
+
+	margin-top: 8px;
+	padding-bottom: 32px;
 }
 
-/* Footer */
+/* ----------------FOOTER---------------------*/
 .footer {
 	background-color: var(--title-text-color);
 }
 
 .footer-text {
 	color: var(--footer-text);
+	width: 264px;
+	height: 72px;
+
+	padding-left: 156px;
+	padding-bottom: 100px;
+	margin-top: 16px;
 }
 
 .logo-web {
@@ -260,9 +387,22 @@ body {
 	display: flex;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
+	padding-top: 100px;
+	padding-left: 156px;
 }
 
-/* PORTFOLIO PAGE */
+/* ---------------------PORTFOLIO PAGE-------------------- */
+
+.portfolio-section {
+	margin-top: 96px;
+}
+
+.portfolio-filter {
+	display: flex;
+	gap: 24px;
+	margin-left: 427px;
+	margin-bottom: 72px;
+}
 
 .portfolio-button {
 	color: var(--accent-color);
@@ -277,6 +417,11 @@ body {
 	align-items: center;
 	text-align: center;
 	letter-spacing: 0.04em;
+
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 .portfolio-button:hover,
@@ -292,6 +437,9 @@ body {
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+
+	margin-top: 32px;
+	padding-left: 16px;
 }
 
 .services-title .p {
@@ -303,10 +451,32 @@ body {
 
 .services-text {
 	color: var(--description-text-color);
-	width: 30px;
 	height: 24px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+
+	margin-top: 8px;
+	padding-left: 16px;
+	padding-bottom: 32px;
 }
+
+.services-card {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 24px;
+	row-gap: 48px;
+}
+
+.service {
+	border: 0.5px solid #f4f4fd;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+/* FOR 7 HOMEWORK
+.section {
+	@media screen and (max-width: 1199 px) {
+		padding-top: 96px;
+		padding-bottom: 96px;
+}*/
