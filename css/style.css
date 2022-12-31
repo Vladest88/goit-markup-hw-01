@@ -82,6 +82,7 @@ button {
 .header {
 	display: flex;
 	align-items: center;
+	border-bottom: 1px solid #e7e9fc;
 }
 
 .header-list {
@@ -99,6 +100,7 @@ button {
 .header-nav,
 .list {
 	display: flex;
+	align-items: center;
 }
 
 /*-----------------НЕ УВЕРЕН В ПРАВИЛЬНОСТИ ХЕДЕР---------------*/
@@ -134,7 +136,6 @@ button {
 	color: var(--title-text-color);
 	text-decoration: none;
 
-	width: 48px;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.5;
@@ -213,7 +214,7 @@ button {
 .button-hero:hover,
 .button-hero:focus {
 	color: var(--background-color);
-	background-color: var(--accent-color);
+	background-color: var(--button-hero-bg);
 }
 
 .button-hero:active {
@@ -332,8 +333,6 @@ button {
 .team-card {
 	padding-top: 32px;
 	padding-bottom: 32px;
-	padding-left: 16px;
-	padding-right: 16px;
 }
 
 /* ----------------FOOTER---------------------*/
