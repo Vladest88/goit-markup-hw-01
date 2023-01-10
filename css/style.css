@@ -7,6 +7,8 @@
 	--footer-text: #e7e9fc;
 	--button-hero-bg: #404bbf;
 	--button-portfolio-bg: #e7e9fc;
+	--customers-icon: #8e8f99;
+	--social-icon-footer: #31d0aa;
 }
 
 body {
@@ -102,8 +104,6 @@ button {
 	align-items: center;
 }
 
-/*-----------------НЕ УВЕРЕН В ПРАВИЛЬНОСТИ ХЕДЕР---------------*/
-
 .logo-second {
 	color: var(--title-text-color);
 	text-decoration: none;
@@ -190,11 +190,18 @@ button {
 	text-align: center;
 	padding-top: 192px;
 	padding-bottom: 192px;
+
+	height: 600px;
+	max-width: 1440px;
+	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+	/*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
 }
 
 .button-hero {
 	color: var(--background-color);
 	background-color: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
 	font-family: inherit;
 	font-weight: 700;
@@ -211,14 +218,15 @@ button {
 }
 
 .button-hero:hover,
-.button-hero:focus {
-	color: var(--background-color);
-	background-color: var(--button-hero-bg);
-}
-
+.button-hero:focus,
 .button-hero:active {
 	color: var(--background-color);
 	background-color: var(--button-hero-bg);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero-foto {
+	background-image: url(../images/people-office\ 1.jpg);
 }
 
 /* ----------------BENEFITS--------------------*/
@@ -254,6 +262,16 @@ button {
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+}
+
+.benefits-icons {
+	width: 264px;
+	height: 112px;
+
+	background-color: var(--background-team);
+	margin-bottom: 8px;
+	text-align: center;
+	padding-top: 24px;
 }
 
 /* ----------------PRODUCTS-------------------*/
@@ -331,7 +349,75 @@ button {
 
 .team-card {
 	padding-top: 32px;
+}
+
+.team-icons-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
 	padding-bottom: 32px;
+}
+
+.social-button {
+	width: 40px;
+	height: 40px;
+	background-color: var(--accent-color);
+	border-radius: 50%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-top: 8px;
+}
+
+.social-button:hover,
+.social-button:focus {
+	background-color: var(--button-hero-bg);
+}
+
+/*-----------------CUSTOMERS------------------*/
+
+.customers-title {
+	color: var(--title-text-color);
+
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11;
+	text-align: center;
+	letter-spacing: 0.02em;
+	text-transform: capitalize;
+
+	margin-bottom: 72px;
+}
+
+.customers-section {
+	padding-top: 130px;
+	padding-bottom: 120px;
+}
+
+.icon-style {
+	fill: var(--customers-icon);
+	width: 168px;
+	height: 88px;
+
+	border: 1px solid var(--customers-icon);
+	border-radius: 4px;
+
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-right: 32px;
+	padding-left: 32px;
+
+	margin-right: 24px;
+}
+
+.icon-style:hover,
+.icon-style:focus {
+	border: 1px solid var(--button-hero-bg);
+	fill: var(--button-hero-bg);
+	cursor: pointer;
 }
 
 /* ----------------FOOTER---------------------*/
@@ -373,6 +459,55 @@ button {
 	text-transform: uppercase;
 }
 
+.footer-icon-title {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+}
+
+.footer-icon-div {
+	margin-left: 120px;
+}
+
+.footer-svg {
+}
+
+.footer-icon-link {
+	width: 40px;
+	height: 40px;
+	background-color: var(--description-text-color);
+	border-radius: 50%;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+
+	display: flex;
+	margin-right: 16px;
+	margin-top: 16px;
+}
+
+.footer-icon-link:hover {
+	background-color: #31d0aa;
+}
+
+.foter-icon-list {
+}
+
+.container {
+	width: 1158px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.footer .container {
+	display: flex;
+	align-items: baseline;
+}
+
 /* ---------------------PORTFOLIO PAGE-------------------- */
 
 .portfolio-section {
@@ -411,6 +546,7 @@ button {
 .portfolio-button:focus {
 	color: var(--background-color);
 	background-color: var(--accent-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .services-title {
@@ -449,6 +585,12 @@ button {
 
 .service {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.service:hover,
+.service:focus {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	cursor: pointer;
 }
 
 .services-card-frame {
