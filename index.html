@@ -376,11 +376,66 @@
 						</li>
 					</ul>
 				</div>
+
+				<div class="signup-footer">
+					<div>
+					<p class="footer-icon-title">Subscribe</p>
+					<form action="signup_form" class="signup-form-footer">
+						<label><input class="email-input" type="text" name="email" placeholder="E-mail" required/></label>
+						<button type="submit" class="subscribe-button">Subscribe
+							<svg class="plane-svg" width="24" height="24">
+								<use href="./images/icons.svg#plane"></use>
+							</svg>
+						</button>
+					</form>
+					</div>
+
+				
+					
+				</div>
 			</div>
 		</footer>
 
-<div class="backdrop is-hidden" data-modal>
+<div class="backdrop" data-modal>
 	<div class="modal">
+		<p class="modal-p">Leave your contacts and we will call you back</p>
+		<form action="signup_modal" class="signup-modal">
+			<label class="signup-modal-field">
+				<span class="modal-input-title">Name</span>
+				<input type="text" name="user_name" class="signup-modal-input" required/>
+			<span class="modal-input-icon">
+			</span>
+	
+			</label>
+			<label class="signup-modal-field">
+				<span class="modal-input-title">Phone</span>
+				<input 
+				type="tel" 
+				name="user_phone" 
+				class="signup-modal-input" 
+				pattern="(0-9){3}-(0-9){3}-(0-9){2}-(0-9){2}"
+				title="xxx-xx-xx"/>
+			</label>
+			<label class="signup-modal-field">
+				<span class="modal-input-title">E-mail</span>
+				<input type="mail" name="user_mail" class="signup-modal-input"/>
+			</label>
+			<label class="signup-modal-field">
+				<span class="modal-input-title">Comment</span>
+				<textarea
+				name="user_message"
+				class="signup-modal-textarea" 
+				placeholder="Text input"></textarea>
+			</label>
+
+			<div class="signup-modal-chekbox">
+			<input id="policy" type="checkbox" name="policy" class="modal-form-chek"/></label>
+			<label for="policy" class="modal-chek-desc">I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
+			<button type="submit" class="modal-submit">Send</button>
+			</div>
+			</form>
+		</label>
+			
 		<button class="modal-close-button" data-modal-close>
 			<svg class="modal-close-icon" width="8" height="8">
 				<use href="./images/icons.svg#modal-close"></use>
