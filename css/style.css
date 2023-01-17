@@ -10,6 +10,7 @@
 	--customers-icon: #8e8f99;
 	--social-icon-footer: #31d0aa;
 	--modal-window-color: #fcfcfc;
+	--chekbox-text-color:#757575;
 }
 
 body {
@@ -272,14 +273,13 @@ button {
 	margin-right: auto;
 	margin-top: 48px;
 
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-hero:hover,
 .button-hero:focus,
 .button-hero:active {
 	background-color: var(--button-hero-bg);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-foto {
@@ -595,6 +595,12 @@ button {
 	height: 40px;
 	text-align: left;
 	padding-left: 24px;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus{
+	background-color: var(--button-hero-bg);
 }
 
 .plane-svg {
@@ -825,13 +831,7 @@ flex-direction: column;
 	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*.backdrop.is-hidden:hover,
-.backdrop.is-hidden:focus,
-.backdrop.is-hidden:active,
-{
-opacity: 0;
-visibility: hidden;
-}*/
+
 
 .modal-p{
 
@@ -852,8 +852,8 @@ margin-bottom: 8px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 padding-left: 38px;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .modal-input-title {
 display: block;
@@ -861,7 +861,6 @@ font-size: 12px;
 line-height: 16px;
 letter-spacing: 0.04em;
 color: var(--customers-icon);
-
 }
 
 .modal-input-title:nth-child(n+1) {
@@ -883,19 +882,18 @@ color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-chek-desc {
-	font-size: 12px;
-line-height: 16px;
-letter-spacing: 0.04em;
-color: #757575;
+margin-top: 16px;
+margin-bottom: 24px;
+
+margin-left:24px;
 }
 
-.signup-modal-chekbox{
-	margin-top: 16px;
-	margin-bottom: 24px;
-}
+
+
 
 .modal-submit{
-background: var(--accent-color);
+	position: absolute;
+background-color: var(--accent-color);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 font-weight: 500;
@@ -907,9 +905,117 @@ color: var(--background-color);
 
 width: 169px;
 height: 56px;
-padding: 0 auto;
-margin:0 auto
+
+bottom: 20px;
+left:119px;
+
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-submit:hover,
+.modal-submit:focus{
+	background-color: var(--button-hero-bg);
+}
+
+.svg-div {
+	position:relative;
+}
+
+.svg-modal-person{
+fill: currentColor;
+	position:absolute;
+	top:8px;
+	left:16px;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.svg-modal-phone{
+	fill: currentColor;
+	position:absolute;
+	top:13px;
+	left: 19px;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svg-modal-mail{
+	position:absolute;
+	top:14px;
+	left: 17.5px;
+	fill: currentColor;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.signup-modal-input:hover,
+.signup-modal-input:focus{
+	border-color: var(--accent-color);
+	outline:none
+}
+
+.signup-modal-input:hover ~ .svg-modal-person,
+.signup-modal-input:focus ~ .svg-modal-person
+ { color: var(--accent-color);
+}
+
+.signup-modal-input:hover ~ .svg-modal-phone,
+.signup-modal-input:focus ~ .svg-modal-phone
+ { color: var(--accent-color);
+}
+
+.signup-modal-input:hover ~ .svg-modal-mail,
+.signup-modal-input:focus ~ .svg-modal-mail
+ { color: var(--accent-color);
+}
+
+
+/*-----------------------CHEKBOX------------------------*/
+
+.chekbox{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance: none;
+}
+
+.modal-chek-desc {
+	display: flex;
+	margin-top: 8px;
+}
+
+.chekbox-text {
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.04em;
+color: var(--chekbox-text-color);
+margin-left: 4px;
+}
+
+.chekbox-icon{
+width: 16px;
+height: 16px;
+border: 1.25px solid var(--title-text-color);
+border-radius: 2px;
+margin-left: -24px;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+
+}
+
+.chekbox:checked + .chekbox-icon {
+background-image: url(../images/Click-chek.svg);
+border-color: var(--button-hero-bg);
+background-origin: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* FOR 7 HOMEWORK
