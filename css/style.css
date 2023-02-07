@@ -13,7 +13,7 @@
 	--chekbox-text-color:#757575;
 }
 
-/*body {
+body {
 	background-color: var(--background-color);
 	color: var(--description-text-color);
 	font-family: roboto, sans-serif;
@@ -60,13 +60,11 @@ button {
 }
 
 
-/*
 .container {
 	width: 1158px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
-*/
 
 
 /* щоб заховати непотрібні заголовки */
@@ -84,55 +82,8 @@ button {
 	overflow: hidden;
 }
 
-.container{
-	width: 100%;
-	padding-left: 16px;
-	padding-right: 16px;
-}
-
-@media screen and (min-width:428px) {
-	.container{
-		width: 396px;
-margin-left: auto;
-margin-right: auto;
-	}
-	
-}
-
-
-@media screen and (min-width:768px) {
-	.container{
-		width: ;
-	}
-	
-}
-
 /* ---------------HEADER------------------- */
 
-.header-list{
-	display: none;
-}
-
-.header-contacts{
-	display: none;
-}
-
-.header{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-top: 24px;
-	padding-bottom: 24px;
-}
-
-.mob-menu-open-icon {
-	background-color: transparent;
-	border:none;
-	padding: 0;
-	height:24px;
-}
-
-/*
 .header {
 	display: flex;
 	align-items: center;
@@ -163,8 +114,7 @@ margin-right: auto;
 .list {
 	display: flex;
 	align-items: center;
-} 
-*/
+}
 
 .logo-second {
 	color: var(--title-text-color);
@@ -193,7 +143,6 @@ margin-right: auto;
 	text-transform: uppercase;
 }
 
-/*
 .header-list a {
 	color: var(--title-text-color);
 	text-decoration: none;
@@ -279,7 +228,6 @@ margin-right: auto;
 	bottom: 0;
 	border-radius: 2px;
 }
-*/
 
 /* ------------HERO-------------*/
 
@@ -930,7 +878,7 @@ margin-bottom:4px;
 }
 
 .privacy-link {
-	color: var(--accent-color);
+	color: #4d5ae5;
 }
 
 .signup-modal-textarea{
@@ -955,8 +903,6 @@ margin-bottom: 24px;
 
 margin-left:24px;
 }
-
-
 
 
 .modal-submit{
@@ -1050,23 +996,3 @@ background-origin: border-box;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FOR 7 HOMEWORK
-.section {
-	@media screen and (max-width: 1199 px) {
-		padding-top: 96px;
-		padding-bottom: 96px;
-}*/
