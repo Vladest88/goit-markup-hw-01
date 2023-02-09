@@ -310,8 +310,8 @@ button {
 
 	.menu-container .menu-toggle {
 		position: absolute;
-		top: 16px;
-		right: 16px;
+		top: 24px;
+		right: 24px;
 		color: #fff;
 	}
 
@@ -329,6 +329,11 @@ button {
 	}
 	.mobile-nav {
 		margin-bottom: auto;
+		margin-top: 64px;
+		margin-left: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
 	}
 	.mobile-nav-link {
 		font-weight: 700;
@@ -341,26 +346,101 @@ button {
 		color: #2e2f42;
 	}
 
-	.mobile-contact {
+	.mobile-nav-link:hover,
+	:focus {
+		color: var(--accent-color);
 	}
+
+	.mobile-contact {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		margin-bottom: 48px;
+		margin-left: 24px;
+	}
+
 	.mobile-contact-link {
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 1.2;
 
 		letter-spacing: 0.02em;
-
-		color: #434455;
 	}
+
 	.mobile-social {
 		display: flex;
 		gap: 35px;
+		justify-content: center;
+		margin-bottom: 24px;
+
+		border: none;
+		outline: none;
 	}
+
+	.mob-phone {
+		width: 337px;
+
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 1.11;
+		text-transform: capitalize;
+
+		color: var(--description-text-color);
+	}
+
+	.mob-mail {
+		width: 192px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.2;
+		letter-spacing: 0.02em;
+
+		color: var(--description-text-color);
+	}
+
+	.mob-phone,
+	.mob-mail:hover,
+	:focus {
+		color: var(--accent-color);
+	}
+
+	.modal-close-button-mob {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		background-color: var(--button-portfolio-bg);
+		fill: currentColor;
+
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.modal-close-button-mob:hover,
+	.modal-close-button-mob:focus,
+	.modal-close-button-mob:active {
+		background-color: var(--button-hero-bg);
+		color: var(--background-color);
+	}
+
+	/*.js-close-menu {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}*/
+
 	@media screen and (min-width: 428px) {
 		.mobile-social {
 			gap: 56px;
 		}
 	}
+
 	.mobile-social-link {
 		color: black;
 	}
@@ -390,7 +470,7 @@ button {
 
 		height: 432px;
 		max-width: 428px;
-		background-image: url(../images/office\ x1.jpg);
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office\ x1.jpg);
 		margin: 0 auto;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -1090,9 +1170,9 @@ button {
 ----------------------------------------------- */
 
 @media screen and (min-width: 768px),
-	screen and (min-device-pixel-ratio: 2),
-	screen and (min-resolution: 192dpi),
-	screen and (min-resolution: 2dppx) {
+	screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	screen and (min-resolution: 192dpi) and (min-width: 768px),
+	screen and (min-resolution: 2dppx) and (min-width: 768px) {
 	/* ---------------HEADER------------------- */
 
 	.header {
@@ -1266,7 +1346,7 @@ button {
 
 		height: 436px;
 		max-width: 768px;
-		background-image: url(../images/office\ x2.jpg);
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office\ x2.jpg);
 		margin: 0 auto;
 		background-size: cover;
 		background-repeat: no-repeat;
